@@ -1,0 +1,22 @@
+.header {
+  background-color: $primary-color;
+  padding: 1rem 1rem 1rem 0;
+  width: 100%;
+  @include flex('row', unset, unset, unset);
+  color: $white;
+  margin-bottom: .5rem;
+
+  &__left-bar {
+    background-color: $secondary-color;
+    position: relative;
+    width: 20px;
+  }
+
+  &__title {
+    margin-left: 1rem;
+  }
+
+  &__text {
+    margin-bottom: 3rem;
+  }
+}

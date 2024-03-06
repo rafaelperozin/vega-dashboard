@@ -1,0 +1,41 @@
+.dashboard {
+  width: 100%;
+  @include flex(column, unset, unset, unset);
+
+  @include laptop {
+    @include flex(row, flex-start, stretch, wrap);
+  }
+
+  &__widget {
+    margin: .5rem 1rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-color: $white;
+  }
+}
+
+.widget {
+  flex-grow: 1;
+  flex-shrink: 0;
+  
+  &--span-1 {
+    @include laptop {
+      flex-basis: 22%;
+    }
+  }
+  &--span-2 {
+    @include laptop {
+      flex-basis: 42%;
+    }
+  }
+  &--span-3 {
+    @include laptop {
+      flex-basis: 68%;
+    }
+  }
+
+  &__title {
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+}
